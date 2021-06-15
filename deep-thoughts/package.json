@@ -16,6 +16,7 @@
   "dependencies": {
     "aws-sdk": "^2.919.0",
     "if-env": "^1.0.4",
+    "npm-watch": "^0.10.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
