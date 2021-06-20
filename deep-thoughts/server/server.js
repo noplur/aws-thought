@@ -8,14 +8,15 @@ const imageRoutes = require('./routes/image-upload'); // add this file import to
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve up static assets
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-}
 
 // app.use(require('./routes'));
 app.use('/api/', userRoutes);
 app.use('/api/', imageRoutes); // add this route for image upload
+
+// Serve up static assets
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 // Start the API server
 app.listen(PORT, () =>
